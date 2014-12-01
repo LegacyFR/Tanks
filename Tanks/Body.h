@@ -13,9 +13,13 @@ public:
 	virtual void moveLeft();
 	virtual void moveRight();
 	virtual void moveDown();
+	virtual void rotate(float);
 
 private:
 	sf::Sprite tank;
+	float rotSpeed;
+	float fwdSpeed;
+	float bwdSpeed;
 	
 };
 
