@@ -10,11 +10,12 @@ Body::Body(void)
 
 Body::~Body(void)
 {
+
 }
 
 void Body::moveUp()
 {
-	
+	//Villix
 }
 
 void Body::moveLeft()
@@ -29,7 +30,7 @@ void Body::moveRight()
 
 void Body::moveDown()
 {
-
+	//G-No
 }
 
 void Body::rotate(float angle)
