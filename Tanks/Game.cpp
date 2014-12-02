@@ -18,24 +18,33 @@ void Game::gameLoop()
 	sf::RenderWindow window(sf::VideoMode(800,600),"Tanks 0.01");
 	window.setFramerateLimit(60);
 
-	while(window.isOpen() != false)
+	while(window.isOpen() )
 	{			
 		sf::Event event;
-		if(event.type == sf::Event::KeyPressed)
-			keyboard.handleKey(event.key.code, player);
-		
-		while(window.pollEvent(event) != event.Closed)
+
+		while(window.pollEvent(event))
 		{
 			if (event.type == sf::Event::Closed)
 				window.close();
 		}
+		if(sf::Keyboard::isKeyPressed( sf::Keyboard::Up))
+		player.moveUp();
 
+	if(sf::Keyboard::isKeyPressed (sf::Keyboard::Left))
+		player.moveLeft();
 
+	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
+		player.moveRight();
 
-		//if(fpsclock.getElapsedTime().asMicroseconds() == 16)
-			window.clear();
+	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
+		player.moveDown();
+		
+		//if(event.type == sf::Event::KeyPressed)
+		//	keyboard.handleKey(event.key.code, player);
+
 			window.draw(player.getTank());
 			window.display();
+			window.clear();
 
 		//check input
 
