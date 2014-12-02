@@ -12,7 +12,6 @@ Body::Body(void)
 
 	tank.setOrigin(32,32);
 	tank.setPosition(100,100);
-	tank.setRotation(45);
 	rotSpeed = 0.16f;
 	fwdSpeed = 5.0f;
 	bwdSpeed = 3.0f;
@@ -29,7 +28,7 @@ void Body::moveUp()
 	float radRotation = rotation * (PI / 180);
 	float coord[2] = {0, 0};
     
-    if(rotation < 90)
+    if(rotation <= 90)
 	{
 		if(rotation == 0)
 			coord[0] = 0;
@@ -37,19 +36,19 @@ void Body::moveUp()
 			coord[0] = 1;
 
 		coord[1] = -1;
+		tank.move(((sin(radRotation)*coord[0]) * fwdSpeed), ((cos(radRotation) * coord[1]) * fwdSpeed));
 	}
-	else if (rotation < 180)
+	else if (rotation <= 180 && rotation > 90)
 	{
 		coord[0] = 1;
-
 		if(rotation == 90)
 			coord[1] = 0;
 		else
 			coord[1] = 1;
+		tank.move(((sin(radRotation)*coord[0]) * fwdSpeed), ((-cos(radRotation) * coord[1]) * fwdSpeed));
 
-		rotation -= 90 * 1;
 	}
-	else if (rotation < 270)
+	else if (rotation <= 270 && rotation > 180)
 	{
 		if(rotation == 180)
 			coord[0] = 0;
@@ -57,19 +56,19 @@ void Body::moveUp()
 			coord[0] = -1;
 
 		coord[1] = 1;
-		rotation -= 90 * 2;
+		tank.move(((-sin(radRotation)*coord[0]) * fwdSpeed), ((-cos(radRotation) * coord[1]) * fwdSpeed));
 	}
-	else if (rotation < 360)
+	else if (rotation <= 360 && rotation > 270)
 	{
 		coord[0] = -1;
 		if(rotation == 180)
 			coord[1] = 0;
 		else
 			coord[1] = -1;
-		rotation -= 90 * 3;
+		tank.move(((-sin(radRotation)*coord[0]) * fwdSpeed), ((cos(radRotation) * coord[1]) * fwdSpeed));
 	}
 	
-	tank.move(((sin(radRotation)*coord[0]) * bwdSpeed), ((cos(radRotation) * coord[1]) * bwdSpeed));
+	
 
 }
 
@@ -93,28 +92,27 @@ void Body::moveDown()
 	{
 		coord[0] = 1;
 		coord[1] = -1;
+		tank.move(-((sin(radRotation)*coord[0]) * bwdSpeed), -((cos(radRotation) * coord[1]) * bwdSpeed));
+
 	}
 	else if (rotation < 180)
 	{
 		coord[0] = 1;
 		coord[1] = 1;
-		rotation -= 90 * 1;
+		tank.move(-((sin(radRotation)*coord[0]) * bwdSpeed), -((-cos(radRotation) * coord[1]) * bwdSpeed));
 	}
 	else if (rotation < 270)
 	{
 		coord[0] = -1;
 		coord[1] = 1;
-		rotation -= 90 * 2;
+		tank.move(-((-sin(radRotation)*coord[0]) * bwdSpeed), -((-cos(radRotation) * coord[1]) * bwdSpeed));
 	}
 	else if (rotation < 360)
 	{
 		coord[0] = -1;
 		coord[1] = -1;
-		rotation -= 90 * 3;
+		tank.move(-((-sin(radRotation)*coord[0]) * bwdSpeed), -((cos(radRotation) * coord[1]) * bwdSpeed));
 	}
-	
-		tank.move(-((sin(radRotation)*coord[0]) * bwdSpeed), -((cos(radRotation) * coord[1]) * bwdSpeed));
-
 }
 
 void Body::rotate(float angle)
