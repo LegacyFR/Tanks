@@ -25,12 +25,14 @@ void Game::gameLoop()
 			if (event.type == sf::Event::Closed)
 				window.close();
 
+			if(event.KeyPressed)
+				keyboard.handleKey(event.key.code, player);
+
 			window.clear();
 			window.draw(player.getTank());
 			window.display();
 
-			if(event.KeyPressed)
-				keyboard.handleKey(event.key.code, player);
+			
 
 		}
 		//check input
