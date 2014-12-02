@@ -1,5 +1,6 @@
 #pragma once
 #include <SFML\Graphics.hpp>
+#include <iostream>
 #define PI 3.14159265
 
 class Body
@@ -21,6 +22,7 @@ private:
 	float fwdSpeed;
 	float bwdSpeed;
 	float x, y;
+	float fwd;
 	
 };
 

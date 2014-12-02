@@ -76,11 +76,19 @@ void Body::moveUp()
 
 void Body::moveLeft()
 {
+
+	if ( sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Down))
+		tank.rotate(rotSpeed);
+	else
+
 	tank.rotate(- rotSpeed);
 }
 
 void Body::moveRight()
 {
+	if ( sf::Keyboard::isKeyPressed(sf::Keyboard::Key::Down))
+		tank.rotate(-rotSpeed);
+	else
 	tank.rotate(rotSpeed);
 }
 

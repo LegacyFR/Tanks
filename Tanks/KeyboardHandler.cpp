@@ -11,15 +11,15 @@ KeyboardHandler::~KeyboardHandler(void)
 
 void KeyboardHandler::handleKey(sf::Keyboard::Key keyPressed, Body& focusedObj)
 {
-	if(keyPressed == sf::Keyboard::Up)
+	if(sf::Keyboard::isKeyPressed( sf::Keyboard::Up))
 		focusedObj.moveUp();
 
-	if(keyPressed == sf::Keyboard::Left)
+	if(sf::Keyboard::isKeyPressed (sf::Keyboard::Left))
 		focusedObj.moveLeft();
 
-	if(keyPressed == sf::Keyboard::Right)
+	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right))
 		focusedObj.moveRight();
 
-	if(keyPressed == sf::Keyboard::Down)
+	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down))
 		focusedObj.moveDown();
 }

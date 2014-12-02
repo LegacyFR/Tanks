@@ -19,16 +19,18 @@ void Game::gameLoop()
 	window.setFramerateLimit(60);
 
 	while(window.isOpen() != false)
-	{
+	{			
 		sf::Event event;
+		if(event.type == sf::Event::KeyPressed)
+			keyboard.handleKey(event.key.code, player);
+		
 		while(window.pollEvent(event) != event.Closed)
 		{
 			if (event.type == sf::Event::Closed)
 				window.close();
 		}
 
-			if(event.type == sf::Event::KeyPressed)
-					keyboard.handleKey(event.key.code, player);
+
 
 		//if(fpsclock.getElapsedTime().asMicroseconds() == 16)
 			window.clear();
