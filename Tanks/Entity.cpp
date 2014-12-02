@@ -2,8 +2,8 @@
 
 Entity::Entity(void)
 {
-	posX = 0;
-	posY = 0;
+	posX = 100;
+	posY = 100;
 }
 
 Entity::Entity(int newPosX, int newPosY)
