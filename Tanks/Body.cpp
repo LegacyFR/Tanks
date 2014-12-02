@@ -15,8 +15,6 @@ Body::~Body(void)
 
 void Body::moveUp()
 {
-	void Body::moveDown()
-{
 	float rotation = tank.getRotation();
 	float coord[2] = {0, 0};
     
@@ -46,7 +44,6 @@ void Body::moveUp()
 	
 		tank.move(((cos(rotation)*coord[0]) * bwdSpeed), ((sin(rotation) * coord[1]) * bwdSpeed));
 
-}
 }
 
 void Body::moveLeft()

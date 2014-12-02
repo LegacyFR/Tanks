@@ -16,7 +16,7 @@ void Game::gameLoop()
 	Body player = Body();
 	KeyboardHandler keyboard = KeyboardHandler();
 
-	while(window.isOpen != false)
+	while(window.isOpen() != false)
 	{
 		sf::Event event;
 		while(window.pollEvent(event) != event.Closed)
@@ -38,5 +38,4 @@ void Game::gameLoop()
 		//render
 
 		//sleep ?
-	}
 }
