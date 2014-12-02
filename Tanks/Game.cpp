@@ -13,8 +13,20 @@ Game::~Game(void)
 
 void Game::gameLoop()
 {
-	while(isRunning != false)
+	Body player = Body();
+	KeyboardHandler keyboard = KeyboardHandler();
+
+	while(window.isOpen != false)
 	{
+		sf::Event event;
+		while(window.pollEvent(event) != event.Closed)
+		{
+			window.clear();
+			window.draw(player.getTank());
+			window.display();
+		}
+	}
+		
 		//check input
 
 		//check AI

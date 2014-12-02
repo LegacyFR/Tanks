@@ -1,6 +1,6 @@
 #pragma once
-#include <SFML\Window.hpp>
-#include "Body.h"
+#include "Entity.h"
+#include <SFML\Graphics.hpp>
 
 class KeyboardHandler
 {

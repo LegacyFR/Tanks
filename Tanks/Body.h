@@ -13,7 +13,8 @@ public:
 	virtual void moveLeft();
 	virtual void moveRight();
 	virtual void moveDown();
-	virtual void rotate(float);
+	void rotate(float);
+	sf::Sprite getTank();
 
 private:
 	sf::Sprite tank;

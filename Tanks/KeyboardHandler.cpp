@@ -1,6 +1,4 @@
 #include "KeyboardHandler.h"
-#include "Body.h"
-#include <SFML\Graphics.hpp>
 
 KeyboardHandler::KeyboardHandler(void)
 {
