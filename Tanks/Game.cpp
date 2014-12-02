@@ -22,7 +22,9 @@ void Game::gameLoop()
 		sf::Event event;
 		while(window.pollEvent(event) != event.Closed)
 		{
-			
+			if (event.type == sf::Event::Closed)
+				window.close();
+
 			window.clear();
 			window.draw(player.getTank());
 			window.display();

@@ -12,6 +12,5 @@ public:
 private:
 	bool isRunning;
 	void gameLoop();
-	sf::RenderWindow window;
 };
 
