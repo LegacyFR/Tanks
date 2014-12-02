@@ -1,5 +1,5 @@
 #pragma once
-#include "Entity.h"
+#include "Body.h"
 #include <SFML\Graphics.hpp>
 
 class KeyboardHandler
@@ -7,6 +7,6 @@ class KeyboardHandler
 public:
 	KeyboardHandler(void);
 	~KeyboardHandler(void);
-	void handleKey(sf::Keyboard::Key, Entity&);
+	void handleKey(sf::Keyboard::Key, Body&);
 
 };

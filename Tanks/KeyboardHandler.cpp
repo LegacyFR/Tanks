@@ -9,7 +9,7 @@ KeyboardHandler::~KeyboardHandler(void)
 {
 }
 
-void KeyboardHandler::handleKey(sf::Keyboard::Key keyPressed, Entity& focusedObj)
+void KeyboardHandler::handleKey(sf::Keyboard::Key keyPressed, Body& focusedObj)
 {
 	if(keyPressed == sf::Keyboard::Up)
 		focusedObj.moveUp();
