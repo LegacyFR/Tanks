@@ -10,4 +10,3 @@ public:
 	void handleKey(sf::Keyboard::Key, Entity&);
 
 };
-

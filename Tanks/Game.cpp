@@ -15,19 +15,20 @@ void Game::gameLoop()
 {
 	Body player = Body();
 	KeyboardHandler keyboard = KeyboardHandler();
+	sf::RenderWindow window(sf::VideoMode(800,600),"Tanks 0.01");
 
 	while(window.isOpen() != false)
 	{
 		sf::Event event;
 		while(window.pollEvent(event) != event.Closed)
 		{
+			
 			window.clear();
 			window.draw(player.getTank());
 			window.display();
 		}
-	}
-		
 		//check input
+
 
 		//check AI
 
@@ -38,4 +39,10 @@ void Game::gameLoop()
 		//render
 
 		//sleep ?
+	}
+		
+		
+	
+
+		
 }
