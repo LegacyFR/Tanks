@@ -17,6 +17,7 @@ public:
 	sf::Sprite getTank();
 
 private:
+	sf::Texture img;
 	sf::Sprite tank;
 	float rotSpeed;
 	float fwdSpeed;

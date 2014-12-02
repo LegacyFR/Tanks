@@ -3,11 +3,9 @@
 
 Body::Body(void)
 {
-	sf::Texture img;
 	if(!img.loadFromFile("basetank6464.png"))
 	{
 		//trigger error
-		tank.setColor(sf::Color::Cyan);
 	}
 	else
 		tank.setTexture(img);
