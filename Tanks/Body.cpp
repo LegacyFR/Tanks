@@ -12,7 +12,7 @@ Body::Body(void)
 
 	tank.setOrigin(32,32);
 	tank.setPosition(100,100);
-	rotSpeed = 0.01666;
+	rotSpeed = 0.16f;
 	fwdSpeed = 5.0f;
 	bwdSpeed = 3.0f;
 }
