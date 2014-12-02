@@ -49,7 +49,7 @@ void Body::moveUp()
 		rotation -= 90 * 3;
 	}
 	
-		tank.move(((cos(rotation)*coord[0]) * bwdSpeed), ((sin(rotation) * coord[1]) * bwdSpeed));
+		tank.move(((sin(rotation)*coord[0]) * bwdSpeed), ((cos(rotation) * coord[1]) * bwdSpeed));
 
 }
 
@@ -92,7 +92,7 @@ void Body::moveDown()
 		rotation -= 90 * 3;
 	}
 	
-		tank.move(-((cos(rotation)*coord[0]) * bwdSpeed), -((sin(rotation) * coord[1]) * bwdSpeed));
+		tank.move(-((sin(rotation)*coord[0]) * bwdSpeed), -((cos(rotation) * coord[1]) * bwdSpeed));
 
 }
 

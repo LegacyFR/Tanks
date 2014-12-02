@@ -16,6 +16,7 @@ void Game::gameLoop()
 	Body player = Body();
 	KeyboardHandler keyboard = KeyboardHandler();
 	sf::RenderWindow window(sf::VideoMode(800,600),"Tanks 0.01");
+	window.setFramerateLimit(60);
 
 	while(window.isOpen() != false)
 	{
