@@ -16,8 +16,6 @@ Body::Body(void)
 	rotSpeed = 0.16f;
 	fwdSpeed = 5.0f;
 	bwdSpeed = 3.0f;
-	x = 0;
-	y = 0;
 }
 
 Body::~Body(void)
@@ -71,9 +69,7 @@ void Body::moveUp()
 		rotation -= 90 * 3;
 	}
 	
-	x = ((sin(radRotation) * coord[0]) * bwdSpeed);
-	y = ((cos(radRotation) * coord[1]) * bwdSpeed);
-	tank.move(x, y);
+	tank.move(((sin(radRotation)*coord[0]) * bwdSpeed), ((cos(radRotation) * coord[1]) * bwdSpeed));
 
 }
 
