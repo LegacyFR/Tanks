@@ -12,7 +12,7 @@ Body::Body(void)
 
 	tank.setOrigin(32,32);
 	tank.setPosition(100,100);
-	rotSpeed = 0.16f;
+	rotSpeed = 0.01666;
 	fwdSpeed = 5.0f;
 	bwdSpeed = 3.0f;
 }
@@ -74,12 +74,12 @@ void Body::moveUp()
 
 void Body::moveLeft()
 {
-	tank.rotate(tank.getRotation() - 0.16f);
+	tank.rotate(tank.getRotation() - rotSpeed);
 }
 
 void Body::moveRight()
 {
-	tank.rotate(tank.getRotation() + 0.16f);
+	tank.rotate(tank.getRotation() + rotSpeed);
 }
 
 void Body::moveDown()
