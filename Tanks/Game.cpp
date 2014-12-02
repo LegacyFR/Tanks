@@ -28,6 +28,10 @@ void Game::gameLoop()
 			window.clear();
 			window.draw(player.getTank());
 			window.display();
+
+			if(event.KeyPressed)
+				keyboard.handleKey(event.key.code, player);
+
 		}
 		//check input
 
