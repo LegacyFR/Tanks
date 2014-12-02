@@ -8,13 +8,15 @@ Body::Body(void)
 		//trigger error
 	}
 	else
+	{
+		img.setSmooth(true);
 		tank.setTexture(img);
-
+	}
 	tank.setOrigin(32,32);
 	tank.setPosition(100,100);
 	rotSpeed = 0.16f;
-	fwdSpeed = 5.0f;
-	bwdSpeed = 3.0f;
+	fwdSpeed = 0.5f;
+	bwdSpeed = 0.2f;
 }
 
 Body::~Body(void)
