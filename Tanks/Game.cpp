@@ -29,7 +29,7 @@ void Game::gameLoop()
 				window.close();
 		}
 
-			if(event.KeyPressed)
+			if(event.type == sf::Event::KeyPressed)
 					keyboard.handleKey(event.key.code, player);
 
 			std::cout << "rotation is "<< player.getTank().getRotation() << " degs" << std::endl;
