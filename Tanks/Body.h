@@ -12,7 +12,6 @@ public:
 	void moveLeft();
 	void moveRight();
 	void moveDown();
-	void rotate(float);
 	sf::Sprite getTank();
 
 private:

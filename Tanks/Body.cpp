@@ -74,12 +74,12 @@ void Body::moveUp()
 
 void Body::moveLeft()
 {
-	tank.rotate(tank.getRotation() - rotSpeed);
+	tank.rotate(- rotSpeed);
 }
 
 void Body::moveRight()
 {
-	tank.rotate(tank.getRotation() + rotSpeed);
+	tank.rotate(rotSpeed);
 }
 
 void Body::moveDown()
@@ -113,11 +113,6 @@ void Body::moveDown()
 		coord[1] = -1;
 		tank.move(-((-sin(radRotation)*coord[0]) * bwdSpeed), -((cos(radRotation) * coord[1]) * bwdSpeed));
 	}
-}
-
-void Body::rotate(float angle)
-{
-	tank.setRotation(angle);
 }
 
 sf::Sprite Body::getTank()
