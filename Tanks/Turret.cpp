@@ -2,15 +2,16 @@
 
 Turret::Turret(void)
 {
-	if(!img.loadFromFile("turret6464.png"))
+	if(!t_turret.loadFromFile("turret6464.png"))
 	{
 		//trigger error
 	}
 	else
 	{
-		img.setSmooth(true);
-		turret.setTexture(img);
+		t_turret.setSmooth(true);
+		turret.setTexture(t_turret);
 	}
+
 	turret.setOrigin(32,49);
 	turret.setPosition(100,100);
 	rotSpeed = 0.32f;
@@ -33,9 +34,6 @@ void Turret::stickBody(Body body)
 
 	sf::Sprite pos = body.getTank();
 	turret.setPosition(pos.getPosition().x,pos.getPosition().y);
-}
-void Turret::Shot()
-{
 }
 
 

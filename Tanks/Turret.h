@@ -12,13 +12,11 @@ public:
 	void turnLeft();
 	void turnRight();
 	void stickBody(Body);
-	void Shot();
+
 	sf::Sprite getTurret();
 
 private:
-	sf::Texture img;
+	sf::Texture t_turret;
 	sf::Sprite turret;
 	float rotSpeed;
-	float x, y;
-	
 };
