@@ -35,44 +35,10 @@ void Game::gameLoop()
 				window.close();
 		}
 
-		// Mouvement Body
-	if(sf::Keyboard::isKeyPressed( sf::Keyboard::Up)|| sf::Keyboard::isKeyPressed(sf::Keyboard::Z) )
-	{
-		player.moveUp();
-		player_turret.stickBody(player);
-		player_projectile.stickTurret(player_turret);
-	}
-	if(sf::Keyboard::isKeyPressed (sf::Keyboard::Left)|| sf::Keyboard::isKeyPressed(sf::Keyboard::Q))
-		player.moveLeft();
-
-	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Right)|| sf::Keyboard::isKeyPressed(sf::Keyboard::D))
-		player.moveRight();
-
-	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Down)|| sf::Keyboard::isKeyPressed(sf::Keyboard::S))
-	{
-		player.moveDown();
-		player_turret.stickBody(player);
-		player_projectile.stickTurret(player_turret);
-	}
-		// Mouvement Turret
-	if(sf::Keyboard::isKeyPressed(sf::Keyboard::A))
-	{
-		player_turret.turnLeft();
-		player_projectile.stickTurret(player_turret);
-	}
-	if(sf::Keyboard::isKeyPressed(sf::Keyboard::E))
-	{
-		player_turret.turnRight();
-		player_projectile.stickTurret(player_turret);
-	}
-
-		// Tir
-	if(sf::Keyboard::isKeyPressed(sf::Keyboard::Space))
-	{
-		player_projectile.Shot();
-	}	
-		//if(event.type == sf::Event::KeyPressed)
-		//	keyboard.handleKey(event.key.code, player);
+		if(event.KeyPressed)
+		{
+			keyboard.handleKey(player,player_turret,player_projectile,window);
+		}
 
 			window.draw(player.getTank());
 			window.draw(player_projectile.getProjectile());
