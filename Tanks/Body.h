@@ -23,6 +23,4 @@ private:
 	float bwdSpeed;
 	float x, y;
 	float fwd;
-	
 };
-
